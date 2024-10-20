@@ -17,13 +17,24 @@ function ColorProvider({ children }) {
     }),
   );
 
+  const updateScale = (newScale) => {
+    setScale(newScale);
+    setLightnessArray(samples(newScale));
+    setChromaArray(
+      samples(newScale).map(() => {
+        return hsl(baseColor).s;
+      }),
+    );
+    setColorArray(generateColorPalette(baseColor, lightnessArray, chromaArray));
+  };
+
   const [colorArray, setColorArray] = useState(
     generateColorPalette(baseColor, lightnessArray, chromaArray),
   );
 
   const colorContextValue = {
     scale,
-    setScale,
+    updateScale,
     baseColor,
     setBaseColor,
     lightnessArray,
