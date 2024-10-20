@@ -12,7 +12,7 @@ export default function LightnessChart() {
   } = useColor();
 
   return (
-    <div className="col-span-5 flex h-96 flex-col gap-3 rounded-3xl bg-white p-6">
+    <div className="col-span-5 flex h-80 flex-col gap-3 overflow-x-auto rounded-3xl bg-white p-6">
       <h1 className="text-xl font-bold">Lightness</h1>
       <div className="flex h-full gap-3">
         {lightnessArray.map((lightness, i) => {

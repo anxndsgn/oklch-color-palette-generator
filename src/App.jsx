@@ -5,7 +5,7 @@ import PaletteCard from './components/PaletteCard';
 
 function App() {
   return (
-    <div className="mx-auto my-10 flex w-1/2 flex-col items-center gap-4">
+    <div className="mx-auto my-10 flex w-3/5 flex-col items-center gap-4">
       <h1 className="text-center text-2xl font-bold">Color Palette</h1>
       {/* Layout */}
       <div className="grid w-full grid-cols-8 items-start gap-3">
